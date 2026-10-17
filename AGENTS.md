@@ -23,18 +23,25 @@ favicon.svg
 `posts/` is the only directory with depth, so post pages use `../css/style.css`,
 `../index.html` and siblings by bare filename. Everything at the root is flat.
 
-### The posts, in publication order
+### The posts, newest first
 
 ```
-why-i-chose-a-midwife    2026-10-12  midwife birth
-at-9-43-in-the-evening   2026-10-05  birth faith
-karis-at-dawn            2026-09-28  birth faith
-why-are-you-so-worried   2026-09-21  faith loss
-nine-weeks-and-three-days 2026-09-14 loss faith
+why-i-chose-a-midwife      2020-02-03  midwife birth
+at-9-43-in-the-evening     2019-08-19  birth faith
+karis-at-dawn              2018-06-04  birth faith
+why-are-you-so-worried     2017-10-09  faith loss
+nine-weeks-and-three-days  2016-08-08  loss faith
 ```
 
-They are deliberately in the order a reader needs them, not the order they were written:
-the loss, then the dream, then the two births, then how the care was arranged. The
+**Each post is dated to when the thing happened, not to when it was uploaded** — the loss
+in August 2016, the dream in October 2017, Karis in June 2018, Hezekiah in August 2019,
+the midwife essay after the second birth. The writing predates the site: her source files
+carry modification dates from 2019 to 2022, so a 2026 upload date was fiction and the dates
+are now consistent with the timeline. A new post gets the date of its event, snapped to a
+Monday so the feed's RFC 822 weekday abbreviation is true.
+
+The order is deliberately the order a reader needs them, not the order they were written:
+the loss, then the dream, then the births, then how the care was arranged. The
 `post-nav` chain links newest → older. A new post goes at the top of the list, takes over
 the newest `post-nav` slot, and the old newest loses its "next" link.
 
