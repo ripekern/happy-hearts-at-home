@@ -253,7 +253,7 @@ It has caught every broken link, including `blog.html` written from the wrong di
 
 ## Things that are still placeholders
 
-- **The live URL is `https://ripekern.github.io/happy-hearts-at-home/`**, set as a
+- **The live URL is `https://happyheartsathome.com/`**, set as a
   hard-coded `BASE` in `feed.xml`, `sitemap.xml`, `robots.txt` and every `canonical` /
   `og:url`. Change all four places together if it moves — a custom domain on a CNAME will
   mean rewriting them, and forgetting one leaves a canonical pointing at github.io, which

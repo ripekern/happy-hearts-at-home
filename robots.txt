@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ripekern.github.io/happy-hearts-at-home/sitemap.xml
+Sitemap: https://happyheartsathome.com/sitemap.xml
 
 # No analytics, no cookies, nothing to block — this site sets neither.
