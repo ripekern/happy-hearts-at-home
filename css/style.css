@@ -434,7 +434,13 @@ a:hover { color: var(--rose-deep); text-decoration-thickness: 2px; }
 
 /* ---------- post ---------- */
 
-.post { padding-block: clamp(2rem, 1.5rem + 3vw, 3.5rem); }
+/* The post-shaped pages (posts/* and homeschooling.html) put `.prose` straight under
+   `<article class="post">` with no `.wrap`, so `.wrap` never supplies them a gutter.
+   Without this, `.prose` is a bare 34rem column with `margin-inline: auto` and it runs
+   flush to both edges of the window below 40rem — text and banner touching the glass on
+   a phone. Above 40rem the column centres inside the padded box exactly as it did
+   before, so the measure on a desktop is unchanged. */
+.post { padding-block: clamp(2rem, 1.5rem + 3vw, 3.5rem); padding-inline: var(--gutter); }
 
 .post-head { margin-bottom: 2.5rem; }
 .post-head h1 {
