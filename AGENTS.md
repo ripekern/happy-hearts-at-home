@@ -26,12 +26,16 @@ favicon.svg
 ### The posts, newest first
 
 ```
-why-i-chose-a-midwife      2020-02-03  midwife birth
 at-9-43-in-the-evening     2019-08-19  birth faith
 karis-at-dawn              2018-06-04  birth faith
 why-are-you-so-worried     2017-10-09  faith loss
+why-i-chose-a-midwife      2017-08-04  midwife birth
 nine-weeks-and-three-days  2016-08-08  loss faith
 ```
+
+The midwife essay is dated **ten months before Karis** — the author's instruction, and it
+is the only date here that is not "a few weeks after the event". It is a Friday; every
+other post is a Monday. Do not normalise it.
 
 **Each post is dated to when the thing happened, not to when it was uploaded** — the loss
 in August 2016, the dream in October 2017, Karis in June 2018, Hezekiah in August 2019,
@@ -41,9 +45,11 @@ are now consistent with the timeline. A new post gets the date of its event, sna
 Monday so the feed's RFC 822 weekday abbreviation is true.
 
 The order is deliberately the order a reader needs them, not the order they were written:
-the loss, then the dream, then the births, then how the care was arranged. The
-`post-nav` chain links newest → older. A new post goes at the top of the list, takes over
-the newest `post-nav` slot, and the old newest loses its "next" link.
+the loss, then the midwife, then the dream, then the two births. The `post-nav` chain links
+newest → older. A new post goes at the top of the list, takes over the newest `post-nav`
+slot, and the old newest loses its "next" link — and because the midwife essay moved back
+before Karis, the front page now shows the three newest (9:43, Karis, the dream) rather
+than the midwife essay.
 
 Tag vocabulary is **loss / faith / birth / midwife** — four words, matching the chips in
 `blog.html`. A new tag needs a chip, a `data-tags` entry, and a `.tags` list in the post.
