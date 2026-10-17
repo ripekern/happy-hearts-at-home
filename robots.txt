@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+# No analytics, no cookies, nothing to block — this site sets neither.

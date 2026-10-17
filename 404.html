@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found &mdash; Happy Hearts at Home</title>
+  <meta name="description" content="That page is not here. The blog, the about page and the letter signup are one click away.">
+  <meta name="robots" content="noindex">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script>
+    (function () { try {
+      var t = localStorage.getItem("hha-theme");
+      if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {} })();
+  </script>
+  <script src="js/theme.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">&#9829;</span>
+        <span class="brand-text">
+          <span class="brand-name">Happy Hearts at Home</span>
+          <span class="brand-tagline">Raising children where you are</span>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="blog.html">The blog</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark mode">&#9789;</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="notfound wrap">
+      <p class="eyebrow">404</p>
+      <h1>That page is not here.</h1>
+      <p>
+        It may have moved, or it may never have existed. The posts are all still where you left
+        them &mdash; start with the newest, or with whatever brought you here.
+      </p>
+      <div class="hero-actions" style="justify-content:center">
+        <a class="btn" href="blog.html">Read the blog</a>
+        <a class="btn ghost" href="index.html">Back to the front page</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-inner">
+        <div>
+          <p>Happy Hearts at Home is written by one mother, on a weeknight, for other mothers.</p>
+        </div>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="feed.xml">RSS</a>
+        </nav>
+      </div>
+      <p class="colophon">&copy; 2026 Happy Hearts at Home &middot; <a href="feed.xml">Subscribe by feed</a></p>
+    </div>
+  </footer>
+
+</body>
+</html>

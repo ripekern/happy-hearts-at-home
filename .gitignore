@@ -1,0 +1,6 @@
+.DS_Store
+*.log
+shot*.png
+
+# Drafts and source documents: kept out of git, see AGENTS.md
+.inbox/
