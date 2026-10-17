@@ -83,9 +83,11 @@ eye against `purebible lookup`. Jeremiah 29:11 in the loss post is one of them.
 
 These are the author's decisions, made in October 2026. Do not quietly undo them.
 
-- **The midwife, her assistants and the emergency services are not named.** Family names —
-  Karis, Hezekiah, Khai — stay. The cruise itinerary and the town are gone; "a ship", "a
-  port abroad", "across the country" instead.
+- **The midwife, her assistants and the emergency services are not named**, and neither is
+  the birthing house. That is the same rule applied to a newer fact: the birthing house sits
+  on the midwife's own land, so naming it names her. Say "a birthing house" and stop there.
+- **Family names stay**: Karis, Hezekiah, Liberty, Khai. The cruise itinerary and the town
+  are gone; "a ship", "a port abroad", "across the country" instead.
 - **The husband is "my husband"** throughout. The source documents spell his name both
   "Sven" and "Swen"; rather than pick one, the posts sidestep it.
 - **The author is Olivia Burgman**, from the About page of her own WordPress site (see
