@@ -92,3 +92,26 @@ phone. The original URL for each is below if a larger master is ever wanted.
 - **Licence page:** https://stocksnap.io/photo/homemade-bread-LT7TVOQWP2
 - **As downloaded:** 960×640
 - **Delivered:** `home-dough.jpg` 960×540, `home-dough-600.jpg` 480×270
+
+## Card photographs
+
+The five thumbnails on the blog index and the front page are **Unsplash**, not CC0. The
+Unsplash Licence permits free use, commercial and non-commercial, without permission or
+attribution — but it is not a public domain dedication, so the credit below is recorded
+anyway. All are cropped to 16:9 on disk; `960×540` plus a `480×270` derivative.
+
+| file | used on | photographer |
+|---|---|---|
+| `card-loss.jpg` | Nine weeks and three days | Dimitar Donovski, unsplash.com/@dmtrdon |
+| `card-dream.jpg` | Why are you so worried? | cropped from `dream-window.jpg` (CC0) |
+| `card-water.jpg` | Karis, at dawn | Harli Marten, unsplash.com/@harlimarten |
+| `card-evening.jpg` | At 9:43 in the evening | Paolo Nicolello, unsplash.com/@paul_nic |
+| `card-midwife.jpg` | Why I chose a midwife | Annie Spratt, unsplash.com/@anniespratt |
+
+Originals are `https://images.unsplash.com/photo-<id>` with `?w=1600&q=82&fm=jpg&fit=max`;
+the ids are 1541480110211-586977e40589, 1474540412665-1cdae210ae6b,
+1528351655744-27cc30462816 and 1528458909336-e7a0adfed0a5.
+
+If you want this column to be CC0 too, Openverse is the place — it was rate-limiting
+(`429`) when these were chosen, and its CC0 pool for "abstract and calm" is thin but not
+empty. Swap any of the four one at a time; nothing else needs to change.

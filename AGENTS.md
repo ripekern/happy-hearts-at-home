@@ -149,9 +149,15 @@ Photographs are deliberately **excluded** from the dark-mode `filter` tint. The 
 art needs knocking back or it glows on a dark page; a real photograph does not, and the tint
 turns it muddy.
 
-Cards on the blog index still carry the inline SVG art, which is the site's visual identity.
-Post banners carry photographs. That mix is intentional — say if you want photos on the
-cards too and it is one rule plus a set of crops.
+Cards carry photographs too, cropped to 16:9 on disk the same way. The abstract SVG art that
+used to sit there is gone; it survives only as an idea, and the `role="img"`/`aria-label`
+pair it needed is now alt text.
+
+**The licence column is not uniform, deliberately.** Post banners, the front page feature and
+the About photo are CC0. The four new card photographs are Unsplash, which is free to use but
+is *not* a public domain dedication. `images/CREDITS.md` says which is which, and a fifth
+card reuses its own CC0 banner picture. Do not quietly mix a new licence in without writing
+the row down.
 
 ## Media is staged, not published
 
