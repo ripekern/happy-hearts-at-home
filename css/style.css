@@ -28,6 +28,7 @@
   --step-4: clamp(2.05rem, 1.6rem + 2.25vw, 3.25rem);
 
   --wrap: 68rem;
+  --gutter: clamp(1.25rem, 0.6rem + 2.4vw, 3.5rem);
   --measure: 34rem;
   --radius: 14px;
   --radius-lg: 22px;
@@ -95,7 +96,7 @@ a:hover { color: var(--rose-deep); text-decoration-thickness: 2px; }
   border: 0;
 }
 
-.wrap { width: min(100% - 2.5rem, var(--wrap)); margin-inline: auto; }
+.wrap { width: min(100% - var(--gutter) * 2, var(--wrap)); margin-inline: auto; }
 .prose { max-width: var(--measure); margin-inline: auto; }
 
 .skip-link {
