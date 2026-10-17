@@ -107,12 +107,14 @@ anyway. All are cropped to 16:9 on disk; `960×540` plus a `480×270` derivative
 | `card-water.jpg` | Karis, at dawn | Harli Marten, unsplash.com/@harlimarten |
 | `card-evening.jpg` | At 9:43 in the evening | Paolo Nicolello, unsplash.com/@paul_nic |
 | `card-midwife.jpg` | Why I chose a midwife | Annie Spratt, unsplash.com/@anniespratt |
+| `homeschool.jpg`, `homeschool-tall.jpg` | Homeschooling page | Zoran Borojevic, unsplash.com/@fresh_studio |
 | `sibling-banner.jpg`, `sibling-card.jpg` | Preparing your toddlers for a new sibling | Pawel Czerwinski, unsplash.com/@pawel_czerwinski |
 
 Originals are `https://images.unsplash.com/photo-<id>` with `?w=1600&q=82&fm=jpg&fit=max`;
 the ids are 1541480110211-586977e40589, 1474540412665-1cdae210ae6b,
 1528351655744-27cc30462816, 1528458909336-e7a0adfed0a5 and, for the sibling post,
-1789659530088-fd1605601cd1 with 1778222238900-8dd68714953c.
+1789659530088-fd1605601cd1 with 1778222238900-8dd68714953c, and for the
+homeschooling page 1572273869941-45732d6f581c.
 
 If you want this column to be CC0 too, Openverse is the place — it was rate-limiting
 (`429`) when these were chosen, and its CC0 pool for "abstract and calm" is thin but not

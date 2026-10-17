@@ -10,6 +10,7 @@ what follows is the part that is not obvious from the code.
 index.html              front page
 blog.html               all posts, with tag filter
 about.html              who is writing
+homeschooling.html       Abeka, digital lessons, and the material they make
 404.html                noindex
 posts/<slug>.html       one file per post
 css/style.css           every colour and size in the site
@@ -52,6 +53,11 @@ slot, and the old newest loses its "next" link — and because the midwife essay
 before Karis, the front page now shows the three newest (9:43, Karis, the dream) rather
 than the midwife essay.
 
+`homeschooling.html` is a page, not a post: it is in the nav and the footer of every page,
+it has no `post-nav` chain and no feed entry, and its date is the day it was written. The
+give-money section on it has **no payment link yet** — the button is a mailto, on purpose.
+See below.
+
 Tag vocabulary is **loss / faith / birth / midwife / family** — matching the chips in
 `blog.html`. A new tag needs a chip, a `data-tags` entry, and a `.tags` list in the post.
 
@@ -93,6 +99,19 @@ for f in sorted(pathlib.Path('posts').glob('*.html')):
 Inline citations (`<cite>` inside a `<p>`) are not covered by that loop — check them by
 eye against `purebible lookup`. Jeremiah 29:11 in the loss post is one of them.
 
+## Unsplash downloads: use `fit=crop`, not `fit=max`
+
+The download URLs in this project's history used `fit=max&w=1600`, which **pads the
+image to the requested width with black bars** and the bars get saved into the file. The
+homeschooling banner shipped with two black stripes down each side until it was noticed in
+a screenshot. Use explicit dimensions with `fit=crop` instead:
+
+```
+...?w=1600&h=686&fit=crop&crop=entropy&q=82&fm=jpg
+```
+
+Look at the saved file, not the source page, after every download.
+
 ## One verse per page, in the footer
 
 Every page carries a verse in its footer, and **no two pages share one**. Ten are spoken
@@ -110,6 +129,7 @@ for. A new page needs a new verse, so check this table before picking one:
 | `posts/at-9-43-in-the-evening.html` | Isaiah 43:2 — through the fire |
 | `posts/why-i-chose-a-midwife.html` | Proverbs 15:1 — a soft answer turneth away wrath |
 | `posts/preparing-for-a-new-sibling.html` | Proverbs 22:6 — train up a child |
+| `homeschooling.html` | Proverbs 1:8 — hear the instruction of thy father |
 
 All ten are KJV 1769, checked against `purebible`, with the translators' supplied words in
 brackets kept. Two are quoted in part and marked with `&hellip;`: Ecclesiastes 3:11 stops
@@ -202,6 +222,17 @@ the About photo are CC0. The four new card photographs are Unsplash, which is fr
 is *not* a public domain dedication. `images/CREDITS.md` says which is which, and a fifth
 card reuses its own CC0 banner picture. Do not quietly mix a new licence in without writing
 the row down.
+
+## The donation button is a mailto until a real payment link exists
+
+The old WordPress site took cryptocurrency through a WooCommerce gateway. On this site the
+"help pay for the next of it" section points at `mailto:` and says so in as many words —
+no dead button, no invented Stripe link. When she sends a real one, swap the single
+`.btn` in `homeschooling.html` for a Stripe Payment Link, PayPal or Coinbase Commerce URL,
+and delete the paragraph that explains the button is not live yet.
+
+Nothing else on the site takes money, and nothing ever will without her saying so. If a
+donation form is ever added it needs a backend — a static site has nowhere to post to.
 
 ## BirthPlan2023.odt never goes near the site
 
