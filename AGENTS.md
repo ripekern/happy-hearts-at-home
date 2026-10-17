@@ -99,6 +99,23 @@ for f in sorted(pathlib.Path('posts').glob('*.html')):
 Inline citations (`<cite>` inside a `<p>`) are not covered by that loop — check them by
 eye against `purebible lookup`. Jeremiah 29:11 in the loss post is one of them.
 
+## The footer's media query lives at the end of the stylesheet
+
+`.footer-inner` is a two-column grid that collapses to one at 52rem. That media query
+**must stay last in the file**. The `.footer-verse` rules declare `text-align: right`, and
+source order beats equal specificity, so a query sitting above them declared
+`text-align: left` and did nothing at all. It looked fine at 1280px and quietly did nothing
+on every phone, which is what "the footer loses formatting when I shrink the page" turned out
+to mean.
+
+Also: the footer is a grid, not flex. With flex and large `flex-basis` values the two blocks
+wrapped at unpredictable widths and the right column dropped below the left one.
+
+Check it by screenshotting the footer alone at 1280 / 1000 / 860 / 700 / 500px — inject
+`.site-header,main{display:none!important}` into a throwaway copy, and use a fresh
+`--user-data-dir` or the browser will serve you a cached stylesheet and lie to you. It lied
+twice during this fix.
+
 ## Unsplash downloads: use `fit=crop`, not `fit=max`
 
 The download URLs in this project's history used `fit=max&w=1600`, which **pads the

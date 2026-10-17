@@ -683,38 +683,37 @@ a:hover { color: var(--rose-deep); text-decoration-thickness: 2px; }
   padding-block: 2.5rem 3rem;
   background: var(--paper-2);
 }
+/* Grid, not flex. With flex the two blocks each had a large flex-basis, so between
+   roughly 42rem and 56rem they wrapped at unpredictable points and the right-hand
+   column dropped below the left one, leaving a tall gap. A two-column grid that
+   collapses to one at a single breakpoint cannot do that. */
 .footer-inner {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 30rem);
   gap: 1.75rem 3rem;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: start;
 }
 .site-footer p { margin: 0; color: var(--ink-soft); font-size: 0.95rem; max-width: 40ch; }
-.footer-about { flex: 1 1 22rem; }
+.footer-about { max-width: 42ch; }
 /* The verse sits on the right of the footer, above the links, and is set to the same
    right edge as the links so the two read as one column. */
 .footer-right {
-  flex: 0 1 34rem;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 1.5rem;
   text-align: right;
 }
+.footer-right .footer-links { justify-content: flex-end; }
 .footer-links { display: flex; gap: 1.25rem; flex-wrap: wrap; font-family: var(--sans); font-size: 0.88rem; }
 .footer-links a { color: var(--ink-soft); text-decoration: none; }
 .footer-links a:hover { color: var(--rose-deep); text-decoration: underline; }
 .colophon { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-faint); margin-top: 2rem; }
-@media (max-width: 40rem) {
-  .footer-right { flex: 1 1 auto; text-align: left; align-items: flex-start; }
-  .footer-verse { text-align: left; }
-}
 
 /* One verse per page, and no page repeats another. See the table in AGENTS.md — a new
    page needs a new verse, and the list of used ones is there so nobody has to grep. */
 .footer-verse {
-  max-width: 46ch;
+  max-width: 100%;
   margin: 0;
   padding: 0 0 1.5rem;
   border-bottom: 1px solid var(--line);
@@ -742,4 +741,15 @@ a:hover { color: var(--rose-deep); text-decoration-thickness: 2px; }
 @media print {
   .site-header, .site-footer, .signup, .post-nav, .skip-link { display: none; }
   body { background: #fff; color: #000; }
+}
+
+/* This must stay at the end of the file. The `.footer-verse` rules below the
+   old position of this query declare `text-align: right`, and source order beats
+   equal specificity — the query was silently doing nothing. */
+@media (max-width: 52rem) {
+  .footer-inner { grid-template-columns: minmax(0, 1fr); }
+  .footer-right { align-items: flex-start; text-align: left; }
+  .footer-right .footer-links { justify-content: flex-start; }
+  .footer-verse { text-align: left; }
+  .footer-about { max-width: none; }
 }
