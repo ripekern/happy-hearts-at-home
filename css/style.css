@@ -2,20 +2,21 @@
    Two themes, one set of tokens. Every colour in the site comes from here. */
 
 :root {
-  --paper:      #fbf7f2;
-  --paper-2:    #f4ece2;
-  --card:       #fffdfa;
-  --ink:        #2b2119;
-  --ink-soft:   #6a5747;
-  --ink-faint:  #8d7a69;
-  --line:       #e5d8c9;
-  --line-soft:  #efe5d9;
-  --rose:       #b4553f;
-  --rose-deep:  #8d3f2e;
-  --rose-wash:  #f7e9e3;
-  --sage:       #6b7f63;
-  --sage-wash:  #eaefe6;
-  --gold:       #b98b3c;
+  --paper:      #fdf8f7;
+  --paper-2:    #f9edf0;
+  --card:       #fffdfd;
+  --ink:        #2e1f24;
+  --ink-soft:   #6e545c;
+  --ink-faint:  #93787f;
+  --line:       #efdde2;
+  --line-soft:  #f6e9ec;
+  --rose:       #d4547e;
+  --rose-deep:  #b23a63;
+  --rose-wash:  #fbe9f0;
+  --lilac:      #efe7f5;
+  --sage:       #6d8a72;
+  --sage-wash:  #ecf1ec;
+  --gold:       #c2914a;
 
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
   --sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -35,20 +36,21 @@
 }
 
 [data-theme="dark"] {
-  --paper:      #17130f;
-  --paper-2:    #1e1915;
-  --card:       #201a15;
-  --ink:        #f2e9df;
-  --ink-soft:   #c8b6a5;
-  --ink-faint:  #9c8878;
-  --line:       #382e26;
-  --line-soft:  #2b231d;
-  --rose:       #e09077;
-  --rose-deep:  #f0b39d;
-  --rose-wash:  #2b1f1a;
-  --sage:       #a2b795;
-  --sage-wash:  #1f2420;
-  --gold:       #d9ad63;
+  --paper:      #191317;
+  --paper-2:    #20181d;
+  --card:       #1f171c;
+  --ink:        #f5ecf0;
+  --ink-soft:   #cdb4bc;
+  --ink-faint:  #a08891;
+  --line:       #3c2b33;
+  --line-soft:  #2e2128;
+  --rose:       #ef8fae;
+  --rose-deep:  #f6b1c8;
+  --rose-wash:  #2c1c25;
+  --lilac:      #241d2b;
+  --sage:       #a4bda8;
+  --sage-wash:  #1f2421;
+  --gold:       #dfb370;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px -20px rgba(0, 0, 0, 0.8);
 }
 
@@ -210,7 +212,7 @@ a:hover { color: var(--rose); }
   padding-block: clamp(3rem, 2rem + 5vw, 5.5rem) clamp(2.5rem, 2rem + 3vw, 4rem);
   background:
     radial-gradient(60rem 30rem at 12% -10%, var(--rose-wash), transparent 60%),
-    radial-gradient(50rem 26rem at 95% 0%, var(--sage-wash), transparent 55%);
+    radial-gradient(50rem 26rem at 95% 0%, var(--lilac), transparent 55%);
   border-bottom: 1px solid var(--line-soft);
 }
 
@@ -362,13 +364,13 @@ a:hover { color: var(--rose); }
   font-size: 0.74rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--sage);
-  background: var(--sage-wash);
+  color: var(--rose-deep);
+  background: var(--rose-wash);
   border-radius: 999px;
   padding: 0.2rem 0.6rem;
   text-decoration: none;
 }
-.tags a:hover { color: var(--paper); background: var(--sage); }
+.tags a:hover { color: var(--paper); background: var(--rose-deep); }
 
 /* ---------- feature strip ---------- */
 
@@ -623,7 +625,7 @@ a:hover { color: var(--rose); }
 
 .signup {
   background:
-    radial-gradient(40rem 24rem at 85% 0%, var(--sage-wash), transparent 60%),
+    radial-gradient(40rem 24rem at 85% 0%, var(--lilac), transparent 60%),
     var(--paper-2);
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);

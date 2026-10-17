@@ -214,6 +214,21 @@ do not add anything she did not say — every post so far is her account, reorga
 Two of the six files she supplied are byte-identical duplicates (`*-2.odt`). Check
 `md5sum` before working through a batch.
 
+## The palette is pink, and the dial is four lines
+
+The accent is a rose pink (`--rose #d4547e`, `--rose-deep #b23a63` in light mode,
+`#ef8fae` / `#f6b1c8` in dark), over a blush paper and a plum-tinted ink. The author asked
+for "more pink" in October 2026, so this replaced an earlier terracotta-and-cream palette.
+
+If she asks for more or less again, only these four values need to move, in both token
+blocks: `--rose`, `--rose-deep`, `--rose-wash`, and `--paper-2`. Nothing in any page is
+hard-coded, so the whole site follows them.
+
+**Sage is not decorative.** `--sage` and `--sage-wash` now serve exactly one thing: the
+`.safety` note, which has to look like the site's own voice rather than the author's, and
+green is how a reader tells the difference. Do not spend it on tags or the hero — those
+went pink, and the hero's second radial uses `--lilac` instead.
+
 ## The stylesheet is the whole design system
 
 All colour comes from the token block at the top of `css/style.css`; dark mode is a second
