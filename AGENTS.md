@@ -362,6 +362,31 @@ Always look at **both** schemes: `preferredColorScheme=1` is light, omitting the
 gives dark. Measure, do not eyeball — for layout questions inject a script that replaces
 `document.body` with computed rects and read the numbers out of `--dump-dom`.
 
+## The nav is added by hand, and then checked by script
+
+Every page carries the same four nav items (Home, The blog, Homeschooling, About) and the
+same footer links, in the same order. Adding one means touching eleven files, and the obvious
+string replacement silently misses the two pages where the item being replaced carries
+`aria-current="page"` — which is why Homeschooling went missing from blog.html and about.html
+and only turned up in their footers.
+
+**Match on the item, never on a pair of adjacent lines, and never check `aria-current`.** Then
+run this, which is the only reason it cannot happen again:
+
+```python
+import pathlib, re
+NAV = ['Home', 'The blog', 'Homeschooling', 'About']
+for p in [f for f in sorted(pathlib.Path('.').rglob('*.html')) if '.inbox' not in f.parts]:
+    h = f.read_text(encoding='utf-8')
+    nav = re.search(r'<nav class="site-nav".*?</nav>', h, re.S).group(0)
+    got = re.findall(r'<a\b[^>]*>([^<]+)</a>', nav)
+    assert got == NAV, f'{p}: nav is {got}'
+```
+
+Note the `<a\b[^>]*>` — a check written as `<a href="[^"]*">` drops every item that carries
+`aria-current`, which is exactly the item you were looking for. The check has to be able to
+fail on the current page.
+
 ## Before committing
 
 ```
