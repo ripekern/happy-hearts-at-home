@@ -696,6 +696,30 @@ a:hover { color: var(--rose-deep); text-decoration-thickness: 2px; }
 .footer-links a:hover { color: var(--rose-deep); text-decoration: underline; }
 .colophon { font-family: var(--sans); font-size: 0.78rem; color: var(--ink-faint); margin-top: 2rem; }
 
+/* One verse per page, and no page repeats another. See the table in AGENTS.md — a new
+   page needs a new verse, and the list of used ones is there so nobody has to grep. */
+.footer-verse {
+  max-width: 56ch;
+  margin: 2.25rem auto 0;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  font-style: italic;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ink-soft);
+}
+.footer-verse cite {
+  display: block;
+  margin-top: 0.4rem;
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-style: normal;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }

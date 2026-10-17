@@ -93,6 +93,34 @@ for f in sorted(pathlib.Path('posts').glob('*.html')):
 Inline citations (`<cite>` inside a `<p>`) are not covered by that loop — check them by
 eye against `purebible lookup`. Jeremiah 29:11 in the loss post is one of them.
 
+## One verse per page, in the footer
+
+Every page carries a verse in its footer, and **no two pages share one**. Ten are spoken
+for. A new page needs a new verse, so check this table before picking one:
+
+| page | verse |
+|---|---|
+| `index.html` | Psalm 127:3 — children as an heritage |
+| `blog.html` | Ecclesiastes 3:11 — everything beautiful in its time |
+| `about.html` | Proverbs 31:28 — her children call her blessed |
+| `404.html` | Psalm 119:105 — a lamp unto my feet |
+| `posts/nine-weeks-and-three-days.html` | Psalm 34:18 — nigh to the broken heart |
+| `posts/why-are-you-so-worried.html` | Isaiah 26:3 — perfect peace |
+| `posts/karis-at-dawn.html` | Psalm 30:5 — joy cometh in the morning |
+| `posts/at-9-43-in-the-evening.html` | Isaiah 43:2 — through the fire |
+| `posts/why-i-chose-a-midwife.html` | Proverbs 15:1 — a soft answer turneth away wrath |
+| `posts/preparing-for-a-new-sibling.html` | Proverbs 22:6 — train up a child |
+
+All ten are KJV 1769, checked against `purebible`, with the translators' supplied words in
+brackets kept. Two are quoted in part and marked with `&hellip;`: Ecclesiastes 3:11 stops
+after "in his time", and Isaiah 43:2 gives only the fire clause. Do not silently drop an
+ellipsis to make a quote look complete.
+
+The verses are chosen to suit the page — the broken heart on the loss post, the morning on
+the one titled *at dawn*. Keep that habit: a new post gets a verse that belongs to it, and
+the safety note on a birth post is deliberately **not** the verse, because green has to stay
+unique to that one block.
+
 ## House rules for this site
 
 These are the author's decisions, made in October 2026. Do not quietly undo them.
