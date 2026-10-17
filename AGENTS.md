@@ -216,9 +216,21 @@ Two of the six files she supplied are byte-identical duplicates (`*-2.odt`). Che
 
 ## The palette is pink, and the dial is four lines
 
-The accent is a rose pink (`--rose #d4547e`, `--rose-deep #b23a63` in light mode,
-`#ef8fae` / `#f6b1c8` in dark), over a blush paper and a plum-tinted ink. The author asked
-for "more pink" in October 2026, so this replaced an earlier terracotta-and-cream palette.
+**Pastel pink**, over blush paper and a plum-tinted ink. The author asked for "more pink",
+then for "more of a pastel pink", in October 2026; this is the second answer, and it replaced
+both an earlier terracotta-and-cream palette and a first, too-saturated rose.
+
+Light: `--rose #f3b7cd` (fills, borders, washes), `--rose-deep #a83a63` (every piece of
+text that is pink), `--rose-wash #fbe7ef`, `--paper #fdf3f6`.
+Dark: `--rose #f0a9c4`, `--rose-deep #f7bfd3`, `--rose-wash #2f2129`, `--paper #1d161a`.
+
+**`--rose` is a pastel and must never be used for text on light mode** — at that lightness it
+is 1.9:1 against the paper. That is why `a:hover` thickens its underline instead of
+lightening. Pink text is always `--rose-deep`.
+
+`--ink-faint` is `#78636b`, not something prettier. The dates and citations use it, and at
+`#957f88` it measured 3.4:1 on the paper — under the 4.5:1 that small text needs. Every
+pink-on-pink pair in both modes was measured, not eyeballed.
 
 If she asks for more or less again, only these four values need to move, in both token
 blocks: `--rose`, `--rose-deep`, `--rose-wash`, and `--paper-2`. Nothing in any page is

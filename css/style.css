@@ -2,20 +2,20 @@
    Two themes, one set of tokens. Every colour in the site comes from here. */
 
 :root {
-  --paper:      #fdf8f7;
-  --paper-2:    #f9edf0;
-  --card:       #fffdfd;
-  --ink:        #2e1f24;
-  --ink-soft:   #6e545c;
-  --ink-faint:  #93787f;
-  --line:       #efdde2;
-  --line-soft:  #f6e9ec;
-  --rose:       #d4547e;
-  --rose-deep:  #b23a63;
-  --rose-wash:  #fbe9f0;
-  --lilac:      #efe7f5;
-  --sage:       #6d8a72;
-  --sage-wash:  #ecf1ec;
+  --paper:      #fdf3f6;
+  --paper-2:    #fbe7ee;
+  --card:       #fffafc;
+  --ink:        #33232a;
+  --ink-soft:   #6f5560;
+  --ink-faint:  #78636b;
+  --line:       #f0dbe3;
+  --line-soft:  #f8eaef;
+  --rose:       #f3b7cd;
+  --rose-deep:  #a83a63;
+  --rose-wash:  #fbe7ef;
+  --lilac:      #ece3f4;
+  --sage:       #6f8b74;
+  --sage-wash:  #edf2ee;
   --gold:       #c2914a;
 
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
@@ -36,21 +36,21 @@
 }
 
 [data-theme="dark"] {
-  --paper:      #191317;
-  --paper-2:    #20181d;
-  --card:       #1f171c;
-  --ink:        #f5ecf0;
-  --ink-soft:   #cdb4bc;
-  --ink-faint:  #a08891;
-  --line:       #3c2b33;
-  --line-soft:  #2e2128;
-  --rose:       #ef8fae;
-  --rose-deep:  #f6b1c8;
-  --rose-wash:  #2c1c25;
-  --lilac:      #241d2b;
-  --sage:       #a4bda8;
-  --sage-wash:  #1f2421;
-  --gold:       #dfb370;
+  --paper:      #1d161a;
+  --paper-2:    #241b20;
+  --card:       #221a1f;
+  --ink:        #f7eef2;
+  --ink-soft:   #d3bcc4;
+  --ink-faint:  #b59da6;
+  --line:       #40303a;
+  --line-soft:  #332630;
+  --rose:       #f0a9c4;
+  --rose-deep:  #f7bfd3;
+  --rose-wash:  #2f2129;
+  --lilac:      #2a2130;
+  --sage:       #a9c0ad;
+  --sage-wash:  #212723;
+  --gold:       #e0b678;
   --shadow: 0 1px 2px rgba(0, 0, 0, 0.3), 0 12px 32px -20px rgba(0, 0, 0, 0.8);
 }
 
@@ -75,7 +75,7 @@ img, svg { max-width: 100%; }
 img { height: auto; display: block; }
 
 a { color: var(--rose-deep); text-decoration-thickness: 1px; text-underline-offset: 2px; }
-a:hover { color: var(--rose); }
+a:hover { color: var(--rose-deep); text-decoration-thickness: 2px; }
 
 :focus-visible {
   outline: 2px solid var(--rose);
