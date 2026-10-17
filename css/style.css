@@ -741,6 +741,43 @@ a:hover { color: var(--rose-deep); text-decoration-thickness: 2px; }
   color: var(--ink-faint);
 }
 
+/* ---------- Bitcoin Cash (the footer of every page) ---------- */
+
+/* The address and the code are one unit: the QR scans to the same string the link opens,
+   and both live in the footer of all eleven pages, so nothing here can drift on its own. */
+.footer-pay {
+  display: flex;
+  align-items: center;
+  gap: 1rem 1.15rem;
+  flex-wrap: wrap;
+  margin-top: 1.75rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line-soft);
+}
+.footer-pay-qr {
+  flex: none;
+  display: block;
+  width: 88px;
+  height: 88px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  line-height: 0;
+}
+.footer-pay-qr img { width: 100%; height: 100%; display: block; }
+/* The code keeps its own light tile in dark mode on purpose, and is deliberately absent
+   from the dark-mode artwork tint: a tinted QR is a QR that will not scan. */
+.footer-pay-note {
+  margin: 0;
+  color: var(--ink-soft);
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  line-height: 1.55;
+  max-width: 52ch;
+}
+.footer-pay-note strong { display: block; color: var(--ink); font-weight: 600; }
+.footer-pay-addr { font-size: 0.82rem; overflow-wrap: anywhere; }
+
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
