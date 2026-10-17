@@ -778,12 +778,82 @@ a:hover { color: var(--rose-deep); text-decoration-thickness: 2px; }
 .footer-pay-note strong { display: block; color: var(--ink); font-weight: 600; }
 .footer-pay-addr { font-size: 0.82rem; overflow-wrap: anywhere; }
 
+/* ---------- questions beside the content (homeschooling page) ---------- */
+
+/* Stacked below the content by default, at exactly the prose measure. The side-by-side
+   layout pins its left edge to the prose column so the text in the left column still lines
+   up with the text above it, and spends the empty space to the right on the answers. That
+   only fits once the viewport is wider than the measure plus the column plus the gap, which
+   is why the breakpoint is 78rem and not one of the site's usual 52rem. */
+.homeschool-foot { max-width: var(--measure); margin-inline: auto; }
+.qa {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem 1.5rem 1.5rem;
+  box-shadow: var(--shadow);
+  margin-top: 2.5rem;   /* stacked: breathing room under the content above */
+}
+.qa h2 { font-size: var(--step-1); line-height: 1.2; margin: 0; }
+.qa-standfirst { color: var(--ink-soft); font-size: 0.95rem; margin: 0.5rem 0 0.25rem; }
+/* A hairline between questions rather than a list marker: this is a panel of answers, not
+   an ordered set of steps. The disclosure is a <details>, so the browser does the opening
+   and closing and the site needs no script for it. */
+.qa-item { border-top: 1px solid var(--line-soft); }
+.qa-item:first-of-type { border-top: 0; }
+.qa-item > summary {
+  position: relative;
+  padding: 0.95rem 1.75rem 0.95rem 0;
+  cursor: pointer;
+  list-style: none;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+.qa-item > summary::-webkit-details-marker { display: none; }
+.qa-item > summary:hover { color: var(--rose-deep); }
+/* The chevron is drawn rather than taken from the marker, so it can rotate when the item
+   opens. Closed it points down, open it points up. */
+.qa-item > summary::after {
+  content: "";
+  position: absolute;
+  top: 1.4rem;
+  right: 0.3rem;
+  width: 0.45rem;
+  height: 0.45rem;
+  border-right: 2px solid var(--rose-deep);
+  border-bottom: 2px solid var(--rose-deep);
+  transform: rotate(45deg);
+  transition: transform 0.2s var(--ease);
+}
+.qa-item[open] > summary { color: var(--rose-deep); }
+.qa-item[open] > summary::after { transform: rotate(-135deg); }
+.qa-item > p { margin: 0 0 1.05rem; color: var(--ink-soft); font-size: 0.97rem; }
+
+@media (min-width: 78rem) {
+  .homeschool-foot {
+    display: grid;
+    grid-template-columns: minmax(0, var(--measure)) minmax(0, 15rem);
+    gap: 0 1.75rem;
+    align-items: start;
+    max-width: none;
+    margin-left: max(var(--gutter), calc(50% - var(--measure) / 2));
+    margin-right: var(--gutter);
+  }
+  .qa { margin-top: 0; }   /* side by side: both columns start on the same line */
+}
+
 @media (prefers-reduced-motion: reduce) {
   * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }
 
 @media print {
   .site-header, .site-footer, .signup, .post-nav, .skip-link { display: none; }
+  /* A closed question would print as a bare heading, so the answers come out in full and
+     the chevrons go away. */
+  .qa-item > summary::after { display: none; }
+  .qa-item::details-content { content-visibility: visible; }
   body { background: #fff; color: #000; }
 }
 
