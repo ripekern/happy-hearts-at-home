@@ -26,6 +26,7 @@ favicon.svg
 ### The posts, newest first
 
 ```
+preparing-for-a-new-sibling 2023-01-16 family faith
 at-9-43-in-the-evening     2019-08-19  birth faith
 karis-at-dawn              2018-06-04  birth faith
 why-are-you-so-worried     2017-10-09  faith loss
@@ -51,7 +52,7 @@ slot, and the old newest loses its "next" link — and because the midwife essay
 before Karis, the front page now shows the three newest (9:43, Karis, the dream) rather
 than the midwife essay.
 
-Tag vocabulary is **loss / faith / birth / midwife** — four words, matching the chips in
+Tag vocabulary is **loss / faith / birth / midwife / family** — matching the chips in
 `blog.html`. A new tag needs a chip, a `data-tags` entry, and a `.tags` list in the post.
 
 ## Scripture: KJV 1769, verified
@@ -173,6 +174,14 @@ the About photo are CC0. The four new card photographs are Unsplash, which is fr
 is *not* a public domain dedication. `images/CREDITS.md` says which is which, and a fifth
 card reuses its own CC0 banner picture. Do not quietly mix a new licence in without writing
 the row down.
+
+## BirthPlan2023.odt never goes near the site
+
+The 2023 birth plan sits in `.inbox/` and is the most identifying document in the project: full
+names for her, her husband and the midwife, a PO box, two phone numbers, and the medical
+preferences. None of it is published, none of it is quoted, and none of it goes into the
+repository — `.inbox/` is gitignored and the site is a public repository. If she asks to publish
+anything from it, read that paragraph back to her first.
 
 ## Media is staged, not published
 
