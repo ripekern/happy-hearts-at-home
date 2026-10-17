@@ -253,10 +253,12 @@ It has caught every broken link, including `blog.html` written from the wrong di
 
 ## Things that are still placeholders
 
+- **The live URL is `https://ripekern.github.io/happy-hearts-at-home/`**, set as a
+  hard-coded `BASE` in `feed.xml`, `sitemap.xml`, `robots.txt` and every `canonical` /
+  `og:url`. Change all four places together if it moves — a custom domain on a CNAME will
+  mean rewriting them, and forgetting one leaves a canonical pointing at github.io, which
+  is worse than having none.
 - The contact address is now the real one, `olivia@happyheartsathome.com`, taken from the
   old site. It appears in every page footer.
-- `feed.xml` uses relative `<link>` values, which most readers want as absolute. Add the
-  domain when there is one.
 - The blog index says "Five posts". Update it when that changes.
-- No `sitemap.xml`, canonical or `og:url` tags — all three want the domain.
 - The signup form posts nowhere (`<form action="#">`).

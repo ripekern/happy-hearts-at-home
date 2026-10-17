@@ -2,47 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Happy Hearts at Home</title>
-    <link>/index.html</link>
+    <link>https://ripekern.github.io/happy-hearts-at-home/index.html</link>
     <description>Birth, loss, and the days after. One mother's account of losing a baby at nine weeks, and of two home births.</description>
     <language>en-gb</language>
+    <generator>hand-written HTML</generator>
     <lastBuildDate>Mon, 12 Oct 2026 20:00:00 GMT</lastBuildDate>
-    <atom:link href="feed.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="https://ripekern.github.io/happy-hearts-at-home/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>Why I chose a midwife</title>
-      <link>posts/why-i-chose-a-midwife.html</link>
-      <guid isPermaLink="true">posts/why-i-chose-a-midwife.html</guid>
+      <link>https://ripekern.github.io/happy-hearts-at-home/posts/why-i-chose-a-midwife.html</link>
+      <guid isPermaLink="true">https://ripekern.github.io/happy-hearts-at-home/posts/why-i-chose-a-midwife.html</guid>
       <pubDate>Mon, 12 Oct 2026 07:00:00 GMT</pubDate>
       <category>Midwife</category>
       <description>What I was actually offered at nine weeks pregnant, what I got, and what I would tell a friend who asked me the same question.</description>
     </item>
     <item>
       <title>At 9:43 in the evening</title>
-      <link>posts/at-9-43-in-the-evening.html</link>
-      <guid isPermaLink="true">posts/at-9-43-in-the-evening.html</guid>
+      <link>https://ripekern.github.io/happy-hearts-at-home/posts/at-9-43-in-the-evening.html</link>
+      <guid isPermaLink="true">https://ripekern.github.io/happy-hearts-at-home/posts/at-9-43-in-the-evening.html</guid>
       <pubDate>Mon, 05 Oct 2026 07:00:00 GMT</pubDate>
       <category>Birth</category>
       <description>Hezekiah arrived weighing nine pounds twelve ounces, and then the room changed very quickly.</description>
     </item>
     <item>
       <title>Karis, at dawn</title>
-      <link>posts/karis-at-dawn.html</link>
-      <guid isPermaLink="true">posts/karis-at-dawn.html</guid>
+      <link>https://ripekern.github.io/happy-hearts-at-home/posts/karis-at-dawn.html</link>
+      <guid isPermaLink="true">https://ripekern.github.io/happy-hearts-at-home/posts/karis-at-dawn.html</guid>
       <pubDate>Mon, 28 Sep 2026 07:00:00 GMT</pubDate>
       <category>Birth</category>
       <description>Seventeen hours of labour, thirteen of them with no pain, and a watermelon eaten in the birthing pool.</description>
     </item>
     <item>
       <title>Why are you so worried?</title>
-      <link>posts/why-are-you-so-worried.html</link>
-      <guid isPermaLink="true">posts/why-are-you-so-worried.html</guid>
+      <link>https://ripekern.github.io/happy-hearts-at-home/posts/why-are-you-so-worried.html</link>
+      <guid isPermaLink="true">https://ripekern.github.io/happy-hearts-at-home/posts/why-are-you-so-worried.html</guid>
       <pubDate>Mon, 21 Sep 2026 07:00:00 GMT</pubDate>
       <category>Faith</category>
       <description>A letter to God in the autumn of 2017, a pregnancy two days later, and a dream that asked me the question nobody had.</description>
     </item>
     <item>
       <title>Nine weeks and three days</title>
-      <link>posts/nine-weeks-and-three-days.html</link>
-      <guid isPermaLink="true">posts/nine-weeks-and-three-days.html</guid>
+      <link>https://ripekern.github.io/happy-hearts-at-home/posts/nine-weeks-and-three-days.html</link>
+      <guid isPermaLink="true">https://ripekern.github.io/happy-hearts-at-home/posts/nine-weeks-and-three-days.html</guid>
       <pubDate>Mon, 14 Sep 2026 07:00:00 GMT</pubDate>
       <category>Loss</category>
       <description>The summer there was no heartbeat, the three choices nobody should have to make, and the call ten days afterwards.</description>
