@@ -162,13 +162,15 @@ unique to that one block.
 
 These are the author's decisions, made in October 2026. Do not quietly undo them.
 
-- **The midwife, her assistants and the emergency services are not named**, and neither is
-  the birthing house. That is the same rule applied to a newer fact: the birthing house sits
-  on the midwife's own land, so naming it names her. Say "a birthing house" and stop there.
-- **Family names stay**: Karis, Hezekiah, Liberty, Khai. The cruise itinerary and the town
-  are gone; "a ship", "a port abroad", "across the country" instead.
-- **The husband is "my husband"** throughout. The source documents spell his name both
-  "Sven" and "Swen"; rather than pick one, the posts sidestep it.
+- **The posts use her source text, verbatim.** In October 2026 she asked for the blog's
+  language to match the articles in `.inbox/`. Keep her sentences, spelling, grammar and
+  names; only paragraphing and the HTML around them change. Do not rewrite her into a
+  smoother editorial voice, and do not add anything she did not write.
+- **Names are published as she wrote them**, in October 2026: the midwife Beth, her
+  assistant Linda, and her husband Sven (the source also spells it "Swen" in one place;
+  leave each occurrence as written). This replaces the earlier rule that hid them. The
+  2023 birth plan still never goes near the site — see below.
+- **Family names stay**: Karis, Hezekiah, Liberty, Khai.
 - **The author is Olivia Burgman**, from the About page of her own WordPress site (see
   below). Every post is bylined "Olivia Burgman" with an `OB` avatar. Note the spelling:
   the ultrasound print in `.inbox/media` says BERGMAN. Her own site says Burgman, so that
@@ -176,10 +178,12 @@ These are the author's decisions, made in October 2026. Do not quietly undo them
 - **Every post about a birth carries a `.safety` note.** Sage, sans-serif, deliberately
   unlike her voice, so a reader cannot mistake it for the author. The 9:43 post's note
   says plainly that heavy bleeding means call an ambulance first, and that refusing one is
-  not a decision to copy.
-- **Medical claims are attributed, never asserted.** "The list I was given", "I pass it on
-  as it was given to me, from my midwife, and I have not gone through those studies". Keep
-  it that way; do not turn her experience back into a general claim about hospitals.
+  not a decision to copy. These notes are the site's own editorial addition; they are not
+  part of her source text.
+- **Her medical claims stand as she wrote them.** The midwife post reproduces her list of
+  outcomes without the site softening it into attribution, because verbatim is what she
+  asked for. Do not add caveats inside her paragraphs; the `.safety` note is where the
+  site speaks.
 
 ## Where the writing came from
 
@@ -207,9 +211,10 @@ here too. What survives of it, and what does not:
 
 ## Photographs
 
-`images/` holds seven CC0 photographs: one banner per post, the front page feature, and the
-About page. `images/CREDITS.md` records photographer, source, licence, original URL and the
-exact delivered sizes for each. **Add a row when you add a picture.**
+`images/` holds the CC0 photographs — one banner per post, the front page feature and the
+About page — plus the family photographs taken from her own source documents. CC0 and
+"hers" are recorded separately in `images/CREDITS.md`; **add a row when you add a
+picture.**
 
 They were found through the Openverse API, which indexes CC0 work across Flickr, StockSnap
 and others. Openverse rate-limits anonymous callers and answers `401` when you push it —
@@ -236,9 +241,10 @@ pair it needed is now alt text.
 
 **The licence column is not uniform, deliberately.** Post banners, the front page feature and
 the About photo are CC0. The four new card photographs are Unsplash, which is free to use but
-is *not* a public domain dedication. `images/CREDITS.md` says which is which, and a fifth
-card reuses its own CC0 banner picture. Do not quietly mix a new licence in without writing
-the row down.
+is *not* a public domain dedication. The six pictures inside the three posts that came from
+`home_birth_article.docx` are her own photographs, not CC0 at all. `images/CREDITS.md` says
+which is which, and a fifth card reuses its own CC0 banner picture. Do not quietly mix a new
+licence in without writing the row down.
 
 ## The donation button is a mailto until a real payment link exists
 
@@ -259,14 +265,30 @@ preferences. None of it is published, none of it is quoted, and none of it goes 
 repository — `.inbox/` is gitignored and the site is a public repository. If she asks to publish
 anything from it, read that paragraph back to her first.
 
-## Media is staged, not published
+## Media from the source documents
 
-`.inbox/media/` holds eight images extracted from the source documents. **None are wired
-into the site.** One is a photograph of the author holding an ultrasound print with her
-name, age and clinic visible; the others are family photographs and ultrasound images.
-Publishing them is her decision, not a formatting one. When it is made, they go to
-`images/` with real alt text, and the `alt` must describe the picture rather than the
-feeling.
+In October 2026 she asked for the source article's pictures to be placed in the posts at
+the same points they occupy in the text, and chose to publish them exactly as they are —
+including the ultrasound print with her name, date of birth and clinic visible. Six of the
+eight files in `.inbox/media/` are now in `images/`:
+
+```
+hello-baby.png         ultrasound-or-photo-2.png
+baby-khai.png          ultrasound-or-photo-3.png
+divider.gif            small-gif-unknown.gif
+letter-photo.jpg       couple-or-family-3.jpg
+ultrasound-holding.jpg ultrasound-holding-photo.jpg
+birth-photo.jpg        couple-or-family-2.jpg
+```
+
+`couple-holding-bags.png` and the duplicate `ultrasound-or-photo-4.png` are still staged
+and unpublished. New pictures go to `images/` with alt text that describes the picture
+rather than the feeling; the alt text on these six is deliberately plain and should be
+replaced with a closer description if she supplies one.
+
+They sit in the text with `.post-figure` (full width) or `.post-figure--left` (set beside
+the paragraph, unfloated below 34rem). The old `<div class="prose">` body still has no
+`object-fit`, so the intrinsic ratio of each picture is kept rather than cropped.
 
 ## Drafts come in as `.docx`
 
@@ -283,9 +305,12 @@ Extraction uses LibreOffice, which is installed (`pandoc` is not):
 soffice --headless --convert-to html --outdir /tmp/hha-draft .inbox/post.docx
 ```
 
-Then rewrite the result into the `.prose` pattern of an existing post. Keep her sentences;
-fix spelling, tense and paragraphing. Do not tidy away repetition that is doing work, and
-do not add anything she did not say — every post so far is her account, reorganised.
+Then put the result into the `.prose` pattern of an existing post **without rewriting it**.
+Her sentences, spelling, grammar and names stay as written; change only paragraph breaks
+and the HTML markup, and drop obvious draft furniture such as `(insert picture here)`,
+`(link here)` and bare outline labels (`Topic1`, `Subtopic1`). Do not add anything she did
+not write. The midwife article arrived as an outline, so its real headings are kept and
+its planning labels are not.
 
 Two of the six files she supplied are byte-identical duplicates (`*-2.odt`). Check
 `md5sum` before working through a batch.
@@ -343,11 +368,15 @@ Prefers lots of pink.
 
 ## House voice
 
-Warm, plain, first person, specific, and Christian without being loud about it — God is
-named plainly and never quoted second-hand. Every post says what actually happened,
-including the part that did not work, and names its own limits ("I have no idea whether she
-learned it from me"). No advice-giving, no course, no before-and-after. `en-GB` spelling;
-`&rsquo;`, `&mdash;`, `&hellip;` entities in prose.
+The posts are **her voice, not the site's**: warm, plain, first person, specific, and
+Christian without being loud about it. Since October 2026 they carry her source sentences
+verbatim, including her American spelling ("labor", "hemorrhaging"), her grammar and her
+names, so the old `en-GB` rule no longer applies to post prose. Use `&rsquo;`, `&ldquo;`,
+`&rdquo;`, `&mdash;` and `&hellip;` entities in the markup, and keep the KJV quotations as
+the site's scripture text even where her draft quoted a modern version.
+
+Pages that are not posts (About, Homeschooling, the front page) still use the site's own
+editorial voice, and the `.safety` notes are the one place inside a post where it speaks.
 
 ## Checking your work
 

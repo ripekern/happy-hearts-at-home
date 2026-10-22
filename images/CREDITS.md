@@ -1,10 +1,14 @@
 # Image credits
 
-Every picture on this site is **CC0** — a public domain dedication, not merely
+Most pictures on this site are **CC0** — a public domain dedication, not merely
 "free to use". They were found through the Openverse API
 (`https://api.openverse.org`), which indexes CC0 work across Flickr, StockSnap and
 others. CC0 asks for nothing in return; this file exists so the provenance is never
 in doubt and a later licence question has an answer.
+
+The exception is the photographs that came out of the author's own source documents
+(`.inbox/`). They are **her own pictures**, not a public-domain dedication, and they
+are recorded below so the two kinds are never confused.
 
 Add a row when you add a picture. Every JPEG is progressive, sRGB, no ICC profile,
 and cropped to the aspect ratio the page uses.
@@ -92,6 +96,25 @@ phone. The original URL for each is below if a larger master is ever wanted.
 - **Licence page:** https://stocksnap.io/photo/homemade-bread-LT7TVOQWP2
 - **As downloaded:** 960×640
 - **Delivered:** `home-dough.jpg` 960×540, `home-dough-600.jpg` 480×270
+
+## Family photographs from the source documents
+
+These came out of `home_birth_article.docx` and its extracted copies in `.inbox/media/`.
+They are the author's own photographs and pictures, **not CC0**, and they are published
+at her instruction with the text they belong to. They are placed at the points in the
+story where they appeared in the original article.
+
+| file | used on | comes from | delivered |
+|---|---|---|---|
+| `hello-baby.png` | Nine weeks and three days | `ultrasound-or-photo-2.png` (originally `hello+baby.png`) | 320×240 |
+| `baby-khai.png` | Nine weeks and three days | `ultrasound-or-photo-3.png` (originally `baby+Kai.png`) | 258×320 |
+| `divider.gif` | Nine weeks and three days | `small-gif-unknown.gif` (the document's `Shape1`) | 113×13 |
+| `letter-photo.jpg` | Why are you so worried? | `couple-or-family-3.jpg` | 577×433 |
+| `ultrasound-holding.jpg` | Why are you so worried? | `ultrasound-holding-photo.jpg` | 960×1280 |
+| `birth-photo.jpg` | Karis, at dawn | `couple-or-family-2.jpg` | 644×430 |
+
+The ultrasound print shows her name, date of birth and clinic. It is published exactly
+as she supplied it, without cropping or blurring.
 
 ## Card photographs
 
